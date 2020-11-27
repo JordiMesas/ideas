@@ -1,7 +1,7 @@
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
 
-h1,h4,td{
+h1,h4,tr{
     text-align: center;
 }
 
@@ -29,12 +29,12 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
-.container {
+.container,.container__form{
   border-radius: 5px;
   padding: 20px;
 }
 
-form, table{
+form{
     width: 50%;
     margin: auto;
 }

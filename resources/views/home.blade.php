@@ -12,13 +12,14 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{asset('css/styles.css')}}">
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">
 </head>
 
 <body>
 
     <div class="container">
         <h1>Ideas</h1>
-        <form action="{{url('create')}}" method="post">
+        <form class="container__form" action="{{url('create')}}" method="post">
             {{csrf_field()}}
             <input type="text" id="title" name="title" placeholder="Título..">
             <input type="text" id="description" name="description" placeholder="Crear nota..">
@@ -26,7 +27,7 @@
 
         </form>
 
-        <table>
+        <table class="table table-hover">
 
             <thead>
                 <tr>
@@ -41,7 +42,7 @@
                     <td>{{$notes->title}}</td>
                     <td>{{$notes->description}}</td>
                     <td>
-                        <button type='submit' class='btn btn-primary' id="update">Actualizar</button>
+                        <button type='submit' class='btn btn-primary'>Actualizar</button>
                     </td>
 
                     <td>
@@ -71,7 +72,9 @@
             </form>
         </div>
     </div>
+
     <script src="{{asset('js/modal.js')}}"></script>
+    <script src="{{asset('js/app.js')}}"></script>
 </body>
 
 </html>
