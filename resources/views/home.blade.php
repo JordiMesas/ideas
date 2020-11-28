@@ -7,12 +7,14 @@
 
     <title>Ideas</title>
 
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{asset('css/styles.css')}}">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
+
 </head>
 
 <body>
@@ -58,6 +60,7 @@
             </tbody>
         </table>
         <div id="myModal" class="modal">
+            <i id="close" class="far fa-times-circle"></i>
             <h4>ACTUALIZA LOS DATOS</h4>
             <form action="{{url('update/'.$notes->id)}}" method="post">
                 {{csrf_field()}}

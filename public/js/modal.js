@@ -5,11 +5,8 @@ for (let i = 0; i < fields.length; i++) {
     });
 }
 
-window.addEventListener("click", (e) => {
-    console.log(e.target);
-    if(e.target.id == 'myModal'){
+document.getElementById('close').addEventListener("click", () => {
         document.getElementById("myModal").style.display = "none";
-    }
 });
 
 
