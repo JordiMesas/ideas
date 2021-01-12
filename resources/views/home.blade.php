@@ -59,8 +59,9 @@
                 @endforeach
             </tbody>
         </table>
-        <div id="myModal" class="modal">
-            <i id="close" class="far fa-times-circle"></i>
+        @foreach($listNotes as $notes)
+        <div class="modal">
+            <i class="far fa-times-circle"></i>
             <h4>ACTUALIZA LOS DATOS</h4>
             <form action="{{url('update/'.$notes->id)}}" method="post">
                 {{csrf_field()}}
@@ -74,6 +75,7 @@
                 <input type="submit" name="update" value="Actualizar">
             </form>
         </div>
+        @endforeach
     </div>
 
     <script src="{{asset('js/modal.js')}}"></script>
